@@ -1,0 +1,304 @@
+/********** General ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/************ Header ***************/
+header {
+    width: 100%;
+    background-color: white;
+    padding: 0 80px;
+}
+
+header > div {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: 130px;
+}
+
+header .left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header .search {
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    padding: 0 5px;
+    padding-right: 18px;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    width: 500px;
+    justify-content: space-between;
+}
+
+header .search input {
+    padding: 12px;
+    border-radius: 20px;
+    border:none;
+    outline: none;
+}
+
+header .shop {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .shop span {
+    color: rgb(38, 194, 38);
+}
+
+header .shop img {
+    width: 22px;
+    height: 22px;
+}
+
+nav {
+    padding-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+nav ul a {
+    color: gray;
+    text-transform: uppercase;
+}
+
+header .top {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    top: 0;
+    left: 0;    
+    transform: translateY(-100%);
+    transition: transform 1s;
+    background-color: white;
+    padding: 10px 40px;
+    z-index: 3;
+}
+
+header .top button {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+}
+
+header .toggle {
+    display: none;
+    width: 30px;
+    background-color: transparent;
+}
+
+/********* Menu ***********/
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+}
+
+.menu.active {
+    visibility: visible;
+    z-index: 2;
+}
+
+.menu > div {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    transform: translateX(-100%);
+    transition: transform .6s;
+}
+
+.menu > div.active {
+    transform: none;
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+.menu .search {
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    padding: 0 5px;
+    padding-right: 18px;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.menu .search input {
+    padding: 9px;
+    border-radius: 20px;
+    border:none;
+    outline: none;
+}
+
+.menu li {
+    border-bottom: 1px solid gray;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 0;
+    color: black;
+}
+
+.menu .redes {
+    margin: 30px 0;
+}
+
+.menu .close {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 28px;
+}
+
+/************ Bg ************/
+.bg {
+    background: url("../../rg/img/TP-WEB.jpg");
+    background-size: 100% 100%;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.bg h1 {
+    font-size: 50px;
+    color: #1b5e1b;
+}
+
+.bg span {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.bg a {
+    padding: 15px 40px;
+    background-color: #1b5e1b;
+    border-radius: 30px;
+}
+
+/************ Tazas *************/
+.tazas {
+    text-align: center;
+    padding: 50px 0;
+    background-color: white;
+    display: block;
+}
+
+.tazas h2 {
+    font-size: 50px;
+    color: #b40e8b;
+    margin: 12px 0 25px 0;
+}
+
+.tazas hr {
+    width: 150px;
+    border: none;
+    height: 1px;
+    background-color: #b40e8b;
+    margin: 0 auto;
+}
+
+.tazas p {
+    font-size: 18px;
+    width: 80%;
+    margin: 30px auto;
+    color: gray;
+}
+
+.tazas h3 {
+    color: rgb(83, 83, 83);
+    font-size: 22px;
+}
+
+.tazas .box-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.tazas .box {
+    position: relative;
+    height: 380px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 10px 30px;
+}
+
+.tazas .box a {
+    background-color: #b40e8b;
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.tazas .box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 1000px) {
+    /************* Header ***********/
+    header .toggle {
+        display: block;
+    }
+    nav, header .shop img:first-child, header .shop img:nth-child(2), header .search {
+        display: none;
+    }
+}
