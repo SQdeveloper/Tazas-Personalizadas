@@ -198,105 +198,149 @@ header .toggle {
     width: 28px;
 }
 
-/******* Options ********/
-.options {
+/********* Bg **********/
+.bg {
     width: 100%;
-    background-color: #c54281;
+    height: 400px;
     text-align: center;
-    padding: 80px 20px;
-}
-
-.options ul {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 70%;
-    row-gap: 30px;
-    margin: 0 auto;
-}
-
-.options h1 {
-    font-size: 40px;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,.4) 100%, transparent), url("../../rg/img/web-portada-magicas-1.jpg");
     color: white;
-    margin-bottom: 25px;
+    gap: 20px;
 }
 
-.options a {
-    padding: 8px 20px;
-    border: 1px solid white;
-    border-radius: 20px;
+.bg h1 {
+    font-size: 40px;
 }
 
-/*********** Productos ************/
-.productos {
+.bg span {
+    font-size: 20px;
+}
+
+/****** Cotizar ********/
+.cotizar {
     width: 90%;
-    margin: auto;
+    margin: 50px auto;
     display: flex;
-    gap: 60px;
-    padding: 60px 0;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.productos .left {
-    width: 220px;
+.cotizar .text {
+    width: 75%;
+    line-height: 25px;
+    font-size: 18px;
 }
 
-.productos .left a {
-    color: black;
-    transition: color .3s;
-}
-
-.productos li{
-    margin-bottom: 15px;
-}
-
-.productos .left a:hover {
-    color: #c54281;
-}
-
-.productos h5 {
+.cotizar .text h2 {
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
-.productos .left > div:first-child {
-    margin-bottom: 40px;
-}
-
-.productos .filter {
-    display: none;
-    justify-content: space-between;
-}
-
-.productos .filter div {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-.productos .filter select {
-    border: none;
-}
-
-.productos .right {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+.cotizar form {
     flex: 1;
+    box-shadow: 0 0 10px 0 rgba(135,9.000000000000028,117.99999999999996,.21);
+    padding: 10px;
+    height: fit-content;
 }
 
-.productos .box img {
+.cotizar label, .cotizar input, .cotizar textarea {
+    display: block;
     width: 100%;
 }
 
-.productos .box span {
-    font-size: 15px;
-    color: #c54281;
-    margin-top: 10px;
-    display: block;
+.cotizar label {
+    margin-bottom: 10px;
 }
 
-.productos .box h4 {
-    margin-top: 10px;
+.cotizar input {
+    margin-bottom: 20px;
+    height: 35px;
+    border: 1px solid rgb(209, 206, 206);
+}
+
+.cotizar textarea {
+    border: 1px solid rgb(209, 206, 206);
+}
+
+.cotizar img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.cotizar button {
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgb(153, 4, 103);
+    color: white;
+}
+
+/*********** Flex-box *************/
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 50px auto;
+    gap: 30px;
+    justify-content: center;
+}
+
+.flex-box .box {
+    width: 350px;
+}
+
+.flex-box img {
+    width: 100%;
+}
+
+/********** UnitA ************/
+.unitA {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.unitA img {
+    width: 300px;
+}
+
+.unitA h3 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.unitA p {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+/********** UnitA ************/
+.unitB {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+.unitB img {
+    width: 300px;
+}
+
+.unitB h3 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.unitB p {
+    line-height: 30px;
+    font-size: 18px;
 }
 
 /*********** Footer ***********/
@@ -328,13 +372,6 @@ footer .redes {
     margin-top: 15px;
 }
 
-@media (max-width: 1150px) {
-    /******** Productos *********/
-    .productos .right {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 1000px) {
     /************* Header ***********/
     header {
@@ -354,38 +391,64 @@ footer .redes {
     header .top {
         padding: 10px 20px;
     }
-}
 
-@media (max-width: 870px) {
-    /******** Filter ********/
-    .productos .filter {
-        display: flex;
+    /********* Bg ********/
+    .bg {
+        height: 300px;
     }
 
-    /******** Options ********/
-    .options {
-        padding: 40px 0;
-    }
-    
-    .options ul {
-        width: 90%;
-    }
-
-    /************ Productos ************/
-    .productos {
+    /*********** Cotizar ************/
+    .cotizar {
         flex-direction: column;
     }
 
-    .productos .left {
-        display: none;
-    }
-
-    .productos .right {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    /*********** Menu ***********/
-    .menu div {
+    .cotizar .text {
         width: 100%;
     }
+}
+
+@media (max-width: 820px) {
+    /******** Flex-box ******/
+    .flex-box .box {
+        width: 300px;
+    }
+
+    /******* Unit *******/
+    .unitA, .unitB {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    /******** Flex-box ******/
+    .flex-box .box {
+        width: 230px;
+    }
+
+    /******* Unit *******/
+    .unitA, .unitB {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 480px) {
+    /****** Bg *******/
+    .bg h1 {
+        font-size: 30px;
+    }
+
+    /***** Cotizar *****/
+    .cotizar .text h2 {
+        font-size: 30px;
+    }
+
+    /********** Flex-box *************/
+    .flex-box .box {
+        width: 80%;
+    }
+}
+/*********** Menu ***********/
+.menu div {
+    width: 100%;
 }

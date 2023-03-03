@@ -300,12 +300,61 @@ footer .redes {
     margin-top: 15px;
 }
 
+@media (max-width: 1200px) {
+    /******** PanelA *********/
+    .panelA img:first-child {
+        display: none;
+    }
+}
+
 @media (max-width: 1000px) {
     /************* Header ***********/
+    header {
+        padding: 0 20px;
+    }
     header .toggle {
         display: block;
     }
     nav, header .shop a:first-child, header .shop a:nth-child(2), header .search {
         display: none;
+    }
+
+    header > div {
+        padding: 10px 0;
+    }
+
+    header .top {
+        padding: 10px 20px;
+    }
+
+    /******** PanelA *********/
+    .panelA {
+        flex-direction: column;
+        padding: 0px 0;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .panelA img:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    /******** Slider ********/
+    .sliderMove {
+        width: 600%;
+    }
+}
+
+@media (max-width: 480px) {
+    /*********** Menu ***********/
+    .menu div {
+        width: 100%;
+    }
+
+    /******** Slider ********/
+    .slider {
+        width: 95%;
     }
 }

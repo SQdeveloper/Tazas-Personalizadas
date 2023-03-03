@@ -20,7 +20,13 @@ buttonArrow[1].addEventListener("click", ()=>{
     buttonArrow[0].style.visibility = "visible";
 });
 
-
 function move() {
     sliderMove.style.transform = `translateX(-${100/8 * number}%)`;
+}
+
+if(window.innerWidth <= 700) {
+    limitSupP = 6;
+}
+else if(window.innerWidth <= 1000) {
+    limitSupP = 5;
 }

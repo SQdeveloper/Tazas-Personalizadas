@@ -198,105 +198,47 @@ header .toggle {
     width: 28px;
 }
 
-/******* Options ********/
-.options {
+/*********** Content *************/
+.content {
     width: 100%;
-    background-color: #c54281;
     text-align: center;
-    padding: 80px 20px;
+    padding: 40px 0;
 }
 
-.options ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 70%;
-    row-gap: 30px;
+.content h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.content .box-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 85%;
     margin: 0 auto;
 }
 
-.options h1 {
-    font-size: 40px;
-    color: white;
-    margin-bottom: 25px;
+.content .box {
+    border: 1px solid rgb(228, 225, 225);
+    padding-bottom: 20px;
+    text-align: start;
 }
 
-.options a {
-    padding: 8px 20px;
-    border: 1px solid white;
-    border-radius: 20px;
-}
-
-/*********** Productos ************/
-.productos {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    gap: 60px;
-    padding: 60px 0;
-}
-
-.productos .left {
-    width: 220px;
-}
-
-.productos .left a {
-    color: black;
-    transition: color .3s;
-}
-
-.productos li{
-    margin-bottom: 15px;
-}
-
-.productos .left a:hover {
-    color: #c54281;
-}
-
-.productos h5 {
-    margin-bottom: 20px;
-}
-
-.productos .left > div:first-child {
-    margin-bottom: 40px;
-}
-
-.productos .filter {
-    display: none;
-    justify-content: space-between;
-}
-
-.productos .filter div {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-.productos .filter select {
-    border: none;
-}
-
-.productos .right {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    flex: 1;
-}
-
-.productos .box img {
+.content .box img {
     width: 100%;
+    height: 250px;
 }
 
-.productos .box span {
-    font-size: 15px;
-    color: #c54281;
-    margin-top: 10px;
-    display: block;
+.content p, .content h3, .content h6 {
+    padding: 0 20px;
 }
 
-.productos .box h4 {
-    margin-top: 10px;
+.content h3 {
+    margin-top: 20px;
+}
+
+.content .box p {
+    margin: 15px 0;
 }
 
 /*********** Footer ***********/
@@ -328,13 +270,6 @@ footer .redes {
     margin-top: 15px;
 }
 
-@media (max-width: 1150px) {
-    /******** Productos *********/
-    .productos .right {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 1000px) {
     /************* Header ***********/
     header {
@@ -354,38 +289,37 @@ footer .redes {
     header .top {
         padding: 10px 20px;
     }
-}
 
-@media (max-width: 870px) {
-    /******** Filter ********/
-    .productos .filter {
-        display: flex;
+    /********** Content *********/
+    .content .box img {
+        height: 180px;
     }
 
-    /******** Options ********/
-    .options {
-        padding: 40px 0;
-    }
-    
-    .options ul {
+    .content .box-grid {
         width: 90%;
     }
+}
 
-    /************ Productos ************/
-    .productos {
-        flex-direction: column;
+@media (max-width: 750px) {
+    /********** Content *********/
+    .content .box-grid {
+        grid-template-columns: 1fr 1fr;
     }
+}
 
-    .productos .left {
-        display: none;
-    }
-
-    .productos .right {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
+@media (max-width: 480px) {
     /*********** Menu ***********/
     .menu div {
         width: 100%;
+    }
+
+    /********** Content *********/
+    .content .box-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content .box img {
+        object-fit: cover;
+        height: 200px;
     }
 }

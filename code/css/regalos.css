@@ -551,11 +551,22 @@ footer .redes {
 
 @media (max-width: 1000px) {
     /************* Header ***********/
+    header {
+        padding: 0 20px;
+    }
     header .toggle {
         display: block;
     }
     nav, header .shop a:first-child, header .shop a:nth-child(2), header .search {
         display: none;
+    }
+
+    header > div {
+        padding: 10px 0;
+    }
+
+    header .top {
+        padding: 10px 20px;
     }
 
     /****** Bg *******/
@@ -565,13 +576,23 @@ footer .redes {
         gap: 80px;
     }
 
-     /******* Eleccion *******/
-     .eleccion .sliderMove {
-        width: 400%;
+    .bg .formulario {
+        padding: 20px;
     }
 
-    .eleccion .box {
-        height: 300px;
+     /******* Eleccion *******/
+     .eleccion {
+        padding: 40px 20px;
+     }
+
+     /*********** Personalizadas ***********/
+     .personalizadas .sliderMove {
+        width: calc(200% + 200%/3)
+     }
+
+     /********* Contactanos *********/     
+     .contactanos h2, .contactanos span {
+        width: 80%;
     }
 }
 
@@ -598,7 +619,7 @@ footer .redes {
     }
 
     .eleccion .slider {
-        width: 100%;
+        width: 70%;
     }
 
     .eleccion .cont-text {
@@ -619,6 +640,13 @@ footer .redes {
     }
 }
 
+@media (max-width: 700px) {
+    /*********** Personalizadas ***********/
+    .personalizadas .sliderMove {
+        width: calc(400%)
+     }
+}
+
 @media (max-width: 640px) {
     /************* Bg **************/
     .bg {
@@ -629,6 +657,10 @@ footer .redes {
 
     .bg .formulario {
         padding: 20px;
+    }
+    /********* Contactanos *********/
+    .contactanos h2, .contactanos span {
+        width: 90%;
     }
 }
 
@@ -644,10 +676,42 @@ footer .redes {
 
     /*********** Eleccion *************/
     .eleccion {
-        padding: 50px 10px;
+        padding: 20px 10px;
+        padding-bottom: 50px;
     }
 
     .eleccion .box {
         height: 220px;
+    }
+
+    .eleccion .cont-text h2 {
+        text-align: center;
+    }
+
+    .eleccion .box img {
+        height: auto;
+    }
+
+    /*********** Menu ***********/
+    .menu div {
+        width: 100%;
+    }
+
+    /************* Banner *************/
+    .banner {
+        padding: 50px 20px;
+    }
+
+    /********* Contactanos *********/
+    .contactanos h2 {
+        font-size:  30px;
+    }
+}
+
+@media (max-width: 445px) {
+    /********* Contactanos *********/
+    .contactanos {
+        padding-top: 30px;
+        height: 370px;
     }
 }

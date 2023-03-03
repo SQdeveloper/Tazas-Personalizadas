@@ -502,10 +502,148 @@ footer .redes {
 
 @media (max-width: 1000px) {
     /************* Header ***********/
+    header {
+        padding: 0 20px;
+    }
     header .toggle {
         display: block;
     }
     nav, header .shop a:first-child, header .shop a:nth-child(2), header .search {
         display: none;
+    }
+
+    header > div {
+        padding: 10px 0;
+    }
+
+    header .top {
+        padding: 10px 20px;
+    }
+
+    /********** Tazas **********/
+    .tazas .box-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /********** Promotion ***********/
+    .promotion .card:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 820px) {
+    .promotion .card:first-child {
+        display: none;
+    }
+    /************ BannerA ************/
+    .bannerA{
+        height: 300px;
+    }
+
+    /************ BannerB ************/
+    .bannerB {
+        height: 300px;
+    }
+}
+
+@media (max-width: 720px) {
+    /****** BG *******/
+    .bg h1 {
+        font-size: 40px;
+    }
+
+    /********** Tazas **********/
+    .tazas .box-grid {
+        grid-template-columns: 1fr;
+    }
+    .tazas h2 {
+        font-size: 40px;
+    }
+
+    /************ BannerA ************/
+    .bannerA h2 {
+        font-size: 35px;
+    }
+
+    /************ BannerB ************/
+    .bannerB h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 590px) {
+    /********** Promotion *************/
+    .promotion {
+        flex-direction: column;
+        padding: 30px 10px;
+    }
+
+    .promotion .text {
+        width: 100%;
+    }
+
+    .promotion .card {
+        width: 80%;
+    }
+
+    .promotion .cont-cards {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .promotion .card a:last-child {
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /******* Bg *********/
+    .bg {
+        height: 50vh;
+    }
+
+    .bg h1 {
+        width: 80%;
+    }
+
+    /********** Tazas *************/
+    .tazas p {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /********* Promition **********/
+    .promotion .card {
+        width: 95%;
+    }
+
+    /********** BannerA **********/
+    .bannerA {
+         width: 95%;
+    }
+    .bannerA span {
+        width: 95%;
+    }
+
+    /********** BannerB **********/
+    .bannerB {
+         width: 95%;
+    }
+    .bannerB span {
+        width: 95%;
+    }
+
+    /********* Promotion ***********/
+    .promotion {
+        margin: 50px 0;
+    }
+
+    /*********** Question *************/
+    .questions {
+        width: 95%;
+    }
+    
+    .menu div {
+        width: 100%;
     }
 }

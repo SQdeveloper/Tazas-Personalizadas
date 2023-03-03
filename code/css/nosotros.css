@@ -209,6 +209,7 @@ header .toggle {
     background-size: cover;
     width: 100%;
     height: 400px;
+    background-position: center center;
 }
 
 .bg h1 {
@@ -374,10 +375,73 @@ footer .redes {
 
 @media (max-width: 1000px) {
     /************* Header ***********/
+    header {
+        padding: 0 20px;
+    }
     header .toggle {
         display: block;
     }
     nav, header .shop a:first-child, header .shop a:nth-child(2), header .search {
         display: none;
+    }
+
+    header > div {
+        padding: 10px 0;
+    }
+
+    header .top {
+        padding: 10px 20px;
+    }
+
+    /******* Bg *********/
+    .bg p {
+        width: 90%;
+    }
+
+    /********** Banner *************/
+    .banner .cont-cards {
+        width: 95%;
+    }
+
+    /************** Team ***************/
+    .team .box-flex {
+        width: 95%;
+    }
+}
+
+@media (max-width: 700px) {
+    .banner .cont-cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    /********* Bg *********/
+    .bg h1 {
+        font-size: 30px;
+    }
+
+    .bg .cont-img{
+        height: 30vh;
+    }
+
+    /*********** Menu ***********/
+    .menu div {
+        width: 100%;
+    }
+
+    /********** Team **********/
+    .team .box {
+        width: 100%;
+    }
+
+    .team .box-flex {
+        width: 90%;
+    }
+
+    /******* Question ********/
+    .questions {
+        width: 95%;
+        padding: 15px 10px;
     }
 }

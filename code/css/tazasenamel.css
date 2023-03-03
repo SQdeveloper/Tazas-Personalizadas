@@ -206,13 +206,10 @@ header .toggle {
     padding: 80px 20px;
 }
 
-.options ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 70%;
-    row-gap: 30px;
+.options p {
+    color: white;
+    font-size: 18px;
+    width: 750px;
     margin: 0 auto;
 }
 
@@ -246,6 +243,21 @@ header .toggle {
     transition: color .3s;
 }
 
+.productos .filter {
+    display: none;
+    justify-content: space-between;
+}
+
+.productos .filter div {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.productos .filter select {
+    border: none;
+}
+
 .productos li{
     margin-bottom: 15px;
 }
@@ -260,21 +272,6 @@ header .toggle {
 
 .productos .left > div:first-child {
     margin-bottom: 40px;
-}
-
-.productos .filter {
-    display: none;
-    justify-content: space-between;
-}
-
-.productos .filter div {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-.productos .filter select {
-    border: none;
 }
 
 .productos .right {
@@ -297,6 +294,37 @@ header .toggle {
 
 .productos .box h4 {
     margin-top: 10px;
+}
+
+/********* Information ************/
+.information {
+    width: 90%;
+    margin: 40px auto;
+    padding-left: 270px;
+}
+
+.information h2 {
+    font-size: 35px;
+}
+
+.information h3 {
+    font-size: 30px;
+}
+
+.information h2, .information h3, .information h4 {
+    margin-bottom: 15px;
+}
+
+.information p { 
+    font-size: 18px;
+}
+
+.information h4 {
+    font-size: 23px;
+}
+
+.information div {
+    margin-bottom: 30px;
 }
 
 /*********** Footer ***********/
@@ -366,11 +394,20 @@ footer .redes {
     .options {
         padding: 40px 0;
     }
-    
-    .options ul {
+
+    .options p {
         width: 90%;
     }
 
+    .options h1 {
+        font-size: 35px;
+    }
+
+    /******** Information *********/
+    .information {
+        padding-left: 0;
+        margin-top: 0;
+    }
     /************ Productos ************/
     .productos {
         flex-direction: column;
@@ -383,7 +420,18 @@ footer .redes {
     .productos .right {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
+    .productos .left {
+        display: none;
+    }
+
+    /******* Information ********/
+    .information h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
     /*********** Menu ***********/
     .menu div {
         width: 100%;

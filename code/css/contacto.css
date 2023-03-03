@@ -198,105 +198,93 @@ header .toggle {
     width: 28px;
 }
 
-/******* Options ********/
-.options {
-    width: 100%;
-    background-color: #c54281;
+/******** Info ********/
+.info {
+    width: 85%;
+    margin: 40px auto;
     text-align: center;
-    padding: 80px 20px;
 }
 
-.options ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.info h1 {
+    font-size: 45px;
+    color:rgb(184, 6, 74);
+}
+
+.info > span {
+    font-size: 18px;
+    margin: 20px auto;
     width: 70%;
-    row-gap: 30px;
-    margin: 0 auto;
-}
-
-.options h1 {
-    font-size: 40px;
-    color: white;
-    margin-bottom: 25px;
-}
-
-.options a {
-    padding: 8px 20px;
-    border: 1px solid white;
-    border-radius: 20px;
-}
-
-/*********** Productos ************/
-.productos {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    gap: 60px;
-    padding: 60px 0;
-}
-
-.productos .left {
-    width: 220px;
-}
-
-.productos .left a {
-    color: black;
-    transition: color .3s;
-}
-
-.productos li{
-    margin-bottom: 15px;
-}
-
-.productos .left a:hover {
-    color: #c54281;
-}
-
-.productos h5 {
-    margin-bottom: 20px;
-}
-
-.productos .left > div:first-child {
-    margin-bottom: 40px;
-}
-
-.productos .filter {
-    display: none;
-    justify-content: space-between;
-}
-
-.productos .filter div {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-.productos .filter select {
-    border: none;
-}
-
-.productos .right {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    flex: 1;
-}
-
-.productos .box img {
-    width: 100%;
-}
-
-.productos .box span {
-    font-size: 15px;
-    color: #c54281;
-    margin-top: 10px;
     display: block;
 }
 
-.productos .box h4 {
-    margin-top: 10px;
+.info > div {
+    display: flex;
+    text-align: center;
+}
+
+.info > div div {
+    flex: 1;
+    padding: 30px 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.info h2 {
+    font-size: 30px;
+}
+
+.info > div div:first-child {
+    background-color: rgb(214, 214, 12);
+}
+
+.info > div div:nth-child(2) {
+    background-color: rgb(37, 66, 197);
+}
+
+.info > div div:nth-child(3) {
+    background-color: rgb(39, 156, 15);
+}
+
+/********** Formulario **************/
+.formulario {
+    display: flex;
+    width: 85%;
+    margin: 60px auto;
+    gap: 40px;
+}
+
+.formulario form, .formulario iframe {
+    width: 50%;
+}
+
+.formulario input, .formulario label, .formulario textarea, .formulario button {
+    width: 100%;
+    display: block;
+}
+
+.formulario input, .formulario button {
+    height: 50px;
+    padding: 0 10px;
+}
+
+.formulario input {
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+.formulario textarea {
+    padding: 15px 0 0 10px;
+}
+
+.formulario button {
+    border-radius: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 17px;
+    background-color: rgb(184, 6, 74);
 }
 
 /*********** Footer ***********/
@@ -328,13 +316,6 @@ footer .redes {
     margin-top: 15px;
 }
 
-@media (max-width: 1150px) {
-    /******** Productos *********/
-    .productos .right {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 1000px) {
     /************* Header ***********/
     header {
@@ -357,35 +338,54 @@ footer .redes {
 }
 
 @media (max-width: 870px) {
-    /******** Filter ********/
-    .productos .filter {
-        display: flex;
-    }
-
-    /******** Options ********/
-    .options {
-        padding: 40px 0;
-    }
-    
-    .options ul {
-        width: 90%;
-    }
-
-    /************ Productos ************/
-    .productos {
+    /********** Formulario **********/
+    .formulario {
         flex-direction: column;
     }
 
-    .productos .left {
-        display: none;
+    .formulario form, .formulario iframe {
+        width: 100%;
     }
 
-    .productos .right {
-        grid-template-columns: repeat(2, 1fr);
+    /******** Info **********/
+    .info, .info > span {
+        width: 90%;
     }
-    
+}
+
+@media (max-width: 790px) {
+    /******** Info *********/
+    .info {
+        width: 100%;
+    }
+    .info > div {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    /********* Formulario *********/
+    .formulario {
+        width: 90%;
+    }
+
+    .formulario button {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
     /*********** Menu ***********/
     .menu div {
         width: 100%;
+    }
+
+    /******** Info *********/
+    .info h1 {
+        font-size: 40px;
+    }
+
+    .info h2 {
+        font-size: 30px;
     }
 }
